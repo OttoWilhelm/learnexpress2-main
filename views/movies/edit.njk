@@ -1,0 +1,20 @@
+    {% extends "partials/layout.njk"%}
+    {% block title %} add{% endblock %}
+     {% block content %}
+    <form action="/movies/edit/{{movie.id}}" method="POST">
+    <div class="mb-5">
+        <label for="name" class="form-label">Name :3</label>
+       <input id="name" class="form-control" type="text" placeholder="movie name" name= "movie name">
+        </div>
+        <div class="mb-5">
+        <label for="year" class="form-label">Year</label>
+       <input id="year" class="form-control" type="number" placeholder="movie year" name= "year">
+        </div>
+        <div class="mb-5">
+        <label for="description" class="form-label">Description plz :3</label>
+       <input id="description" class="form-control" type="text" placeholder="Movie description" name= "description">
+        </div>
+        <input type="submit" value = "update">
+    </form>
+   
+    {% endblock %}

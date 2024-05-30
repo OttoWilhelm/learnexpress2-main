@@ -1,0 +1,27 @@
+{% extends "partials/layout.njk" %}
+{% block title %}Ai giv up :3{% endblock %}
+{% block content %}
+    <h1>Mjäu mjäu ma ei tea midagi :3</h1>
+
+{% include "partials/paginatian.njk" %}
+
+    <div class="row">
+    {% for movie in movies %}
+    <div class="col-3 mb-3">
+    
+    <div class="card h-100" style="padding: 1rem; margin-top: 15px;">
+ {# <img src="..." class="card-img-top" alt="..."> #}
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}} </h5>
+    <p class="card-text">{{movie.snippet()}}... </p>
+    </div>
+    
+  <div class="card footer">
+    <a href="#" class="btn btn-outline-info">Awoop</a>
+    </div>
+</div>
+</div>
+{%endfor%}
+</div>
+{% endblock %}
+
